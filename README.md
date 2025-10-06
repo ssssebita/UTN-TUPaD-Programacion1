@@ -1,11 +1,11 @@
 # UTN-TUPaD-Programacion1
 
-#Tecnicatura Universitaria en Programación
-#Universidad Tecnológica Nacional
+Tecnicatura Universitaria en Programación
+Universidad Tecnológica Nacional
 
-#Estudiante
-#Nombre: Cama Vera, Pablo
-#Comisión: 
+Estudiante
+Nombre: Cama Vera, Pablo
+Comisión: 
 
 Descripción del Repositorio
 Este repositorio almacenta todos los trabajos prácticos realizados durante la cursada de Programación 1.
