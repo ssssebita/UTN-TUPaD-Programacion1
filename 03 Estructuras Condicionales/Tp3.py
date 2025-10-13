@@ -84,11 +84,11 @@ else:
 # forma aleatoria.
 
 import random
-from statistics import mode, median, mean
+from statistics import moda, mediana, media
 numeros_aleatorios = [random.randint(1, 100) for i in range(50)]
 print(numeros_aleatorios)
 try:
-    moda = mode(numeros_aleatorios)
+    moda = moda(numeros_aleatorios)
 except:
     moda = None 
 if media == mediana and mediana == moda:
@@ -106,10 +106,14 @@ else:
 # pantalla; en caso contrario, dejar el string tal cual lo ingresó el usuario e imprimirlo por
 # pantalla.
 
+vocales="aeiouAEIOU"
+
+palabra=input("Escribime una palabra: ")
+
 if palabra:
     ultima_letra = palabra[-1]
     
-    if ultima_letra in VOCALES:
+    if ultima_letra in vocales:
         oracion_resultante = palabra + "!"
     else:
         oracion_resultante = palabra
