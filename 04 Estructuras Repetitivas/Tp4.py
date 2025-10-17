@@ -149,7 +149,7 @@ print(f"Números negativos: {negativos}")
 
 #9
 
-cantidad_a_ingresar = 5
+cantidad_a_ingresar = 100
 
 suma_total = 0
 
@@ -174,25 +174,26 @@ print(f"La media (promedio) de los valores es de: {media:.2f}")
 
 #10
 
-cantidad_a_ingresar = 5
+#Voy a pedir el número como una cadena
+num_str = input("Decime un número entero: ")
 
-suma_total = 0
+if not num_str.isdigit():
+    if not(num_str.startswith('-') and num_str[1:].isdigit()):
+        print("Eror: Ingresá un número entero válido")
+        exit()
 
-print(f"---Calculadora de media de {cantidad_a_ingresar} números")
+es_negativo = num_str.startswith('-')
+if es_negativo:
+    digitos_a_invertir = num_str[1:]
+else:
+    digitos_a_invertir = num_str
 
-for i in range(cantidad_a_ingresar):
-    while True:
-        try:
-            entrada = input(f"Ingresá el número {i + 1} de {cantidad_a_ingresar}: ")
-            numero = int(entrada)
-            suma_total += numero
-            break
-        except ValueError:
-            print("Error: Ingresá números enteros válidos")
+num_invertido_str = digitos_a_invertir[::-1]
 
-media = suma_total / cantidad_a_ingresar
+if es_negativo:
+    resultado_final = "-" + num_invertido_str
+else:
+    resultado_final = num_invertido_str
 
-print("---RESULTADO---")
-print(f"Suma total de los números: {suma_total}")
-print(f"Cantidad de números ingresados {cantidad_a_ingresar}")
-print(f"La media (promedio) de los valores es de: {media:.2f}")
+print(f"El número ingresado fue: {num_str}")
+print(f"El número invertido es: {resultado_final}")
